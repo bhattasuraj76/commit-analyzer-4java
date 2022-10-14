@@ -30,7 +30,7 @@ def get_func_overriding_commits(repo_url, branch):
                 deleted_func_list = []
 
                 # Added code diff
-                added_func_regex = "\+ + (public|private|static|protected|abstract|native|synchronized) ([a-zA-Z0-9<>._?, ]+) +([a-zA-Z0-9_]+) *\\([a-zA-Z0-9<>\\[\\]._?, \n]*\\) *([a-zA-Z0-9_ ,\n]*) *\\{"
+                added_func_regex = "\+ + (public|private|static|protected|abstract|native) ([a-zA-Z0-9<>._?, ]+) +([a-zA-Z0-9_]+) *\\([a-zA-Z0-9<>\\[\\]._?, \n]*\\) *([a-zA-Z0-9_ ,\n]*) *\\{"
                 grp = re.finditer(added_func_regex, change)
                 added_raw_func_def_list = [x.group() for x in grp]
                 # print(added_raw_func_def_list)
@@ -63,7 +63,7 @@ def get_func_overriding_commits(repo_url, branch):
                 # print(added_func_list)
 
                 # Deleted code diff
-                deleted_func_regex = "- + (public|private|static|protected|abstract|native|synchronized) ([a-zA-Z0-9<>._?, ]+) +([a-zA-Z0-9_]+) *\\([a-zA-Z0-9<>\\[\\]._?, \n]*\\) *([a-zA-Z0-9_ ,\n]*) *\\{"
+                deleted_func_regex = "- + (public|private|static|protected|abstract|native) ([a-zA-Z0-9<>._?, ]+) +([a-zA-Z0-9_]+) *\\([a-zA-Z0-9<>\\[\\]._?, \n]*\\) *([a-zA-Z0-9_ ,\n]*) *\\{"
                 grp = re.finditer(deleted_func_regex, change)
                 deleted_raw_func_def_list = [x.group() for x in grp]
                 # print(deleted_raw_func_def_list)
