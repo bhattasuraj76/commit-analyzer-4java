@@ -21,6 +21,6 @@ if target_repo_url:
         
     except Exception as e:
         print(f"Error occured: {type(e).__name__}")
-        print(str(e))
+        # print(str(e))
 else:
     print("Github repository url not found in .env file")
