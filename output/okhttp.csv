@@ -1,0 +1,179 @@
+Hash,Filename,New Function Signature,Old Function Signature
+7a7ad1cdb22ed381c468ee38d757da03b4b1877a,Threads.java,"public static ThreadFactory newThreadFactory(final String name, final boolean daemon)",public static ThreadFactory newThreadFactory(final String name)
+853c4012b79711f123c0b9780e565062b32bf1c7,SpdyWriter.java,"public void synReply(int flags, int streamId, List<String> nameValueBlock) throws IOException",public void synReply() throws IOException
+853c4012b79711f123c0b9780e565062b32bf1c7,SpdyWriter.java,"public void synReset(int streamId, int statusCode) throws IOException",public void synReset() throws IOException
+853c4012b79711f123c0b9780e565062b32bf1c7,SpdyWriter.java,"public void data(int flags, int streamId, byte[] data) throws IOException",public void data(byte[] data) throws IOException
+853c4012b79711f123c0b9780e565062b32bf1c7,SpdyWriter.java,"public void settings(int flags, Settings settings) throws IOException",public void settings(int numberOfEntries) throws IOException
+853c4012b79711f123c0b9780e565062b32bf1c7,SpdyWriter.java,"public void ping(int flags, int id) throws IOException",public void ping() throws IOException
+961d797e9c84557cdf56f7036558e72a54c578f6,SpdyReader.java,"private void readSynStream(Handler handler, int flags, int length) throws IOException",private void readSynStream() throws IOException
+961d797e9c84557cdf56f7036558e72a54c578f6,SpdyReader.java,"private void readSynReply(Handler handler, int flags, int length) throws IOException",private void readSynReply() throws IOException
+961d797e9c84557cdf56f7036558e72a54c578f6,SpdyReader.java,"private void readPing(Handler handler, int flags, int length) throws IOException",private void readPing() throws IOException
+961d797e9c84557cdf56f7036558e72a54c578f6,SpdyReader.java,"private void readSettings(Handler handler, int flags, int length) throws IOException",private void readSettings() throws IOException
+99fb988657263a77b9d9b26bf2f64ec82a0cab72,SpdyStream.java,"public void reply(List<String> responseHeaders, boolean out) throws IOException",public OutputStream reply(List<String> responseHeaders) throws IOException
+3355d0c99bb946a6441f08fe6fd1c9881a9ea96a,HttpConnection.java,private void upgradeToTls(TunnelConfig tunnelConfig) throws IOException,"private void upgradeToTls(boolean tlsTolerant, TunnelConfig tunnelConfig) throws IOException"
+7f7aa90bc5d41d8f818fc988d2a91d22393c7329,URLConnectionTest.java,private static HttpURLConnection openConnection(URL url),"private static OkHttpConnection openConnection(URL url, Proxy proxy)"
+7f7aa90bc5d41d8f818fc988d2a91d22393c7329,URLConnectionTest.java,"private static HttpURLConnection openConnection(URL url, Proxy proxy)",private static OkHttpConnection openConnection(URL url)
+1a1e1b7e2dee58fc9be947dec84126b0e35fe527,URLConnectionTest.java,private HttpURLConnection openConnection(URL url),"private static HttpURLConnection openConnection(URL url, Proxy proxy)"
+2d45a13249943cafa73460b35c3c366e5742eb6f,DiskLruCache.java,public Editor edit(String key) throws IOException,"private synchronized Editor edit(String key, long expectedSequenceNumber) throws IOException"
+2d45a13249943cafa73460b35c3c366e5742eb6f,DiskLruCache.java,"private synchronized Editor edit(String key, long expectedSequenceNumber) throws IOException",public Editor edit(String key) throws IOException
+2d45a13249943cafa73460b35c3c366e5742eb6f,DiskLruCache.java,"private synchronized Editor edit(String key, long expectedSequenceNumber) throws IOException",public Editor edit() throws IOException
+2d45a13249943cafa73460b35c3c366e5742eb6f,DiskLruCache.java,public Editor edit() throws IOException,"private synchronized Editor edit(String key, long expectedSequenceNumber) throws IOException"
+2d45a13249943cafa73460b35c3c366e5742eb6f,Util.java,public static int getEffectivePort(URI uri),"private static int getEffectivePort(String scheme, int specifiedPort)"
+2d45a13249943cafa73460b35c3c366e5742eb6f,Util.java,public static int getEffectivePort(URL url),"private static int getEffectivePort(String scheme, int specifiedPort)"
+2d45a13249943cafa73460b35c3c366e5742eb6f,Util.java,"private static int getEffectivePort(String scheme, int specifiedPort)",public static int getEffectivePort(URI uri)
+2d45a13249943cafa73460b35c3c366e5742eb6f,Util.java,"private static int getEffectivePort(String scheme, int specifiedPort)",public static int getEffectivePort(URL url)
+2d45a13249943cafa73460b35c3c366e5742eb6f,Util.java,"public static void readFully(InputStream in, byte[] dst) throws IOException","public static void readFully(InputStream in, byte[] dst, int offset, int byteCount) throws IOException"
+2d45a13249943cafa73460b35c3c366e5742eb6f,Util.java,"public static void readFully(InputStream in, byte[] dst) throws IOException",public static String readFully(Reader reader) throws IOException
+2d45a13249943cafa73460b35c3c366e5742eb6f,Util.java,public static String readFully(Reader reader) throws IOException,"public static void readFully(InputStream in, byte[] dst) throws IOException"
+2d45a13249943cafa73460b35c3c366e5742eb6f,Util.java,public static String readFully(Reader reader) throws IOException,"public static void readFully(InputStream in, byte[] dst, int offset, int byteCount) throws IOException"
+2d45a13249943cafa73460b35c3c366e5742eb6f,Ping.java,public long roundTripTime() throws InterruptedException,"public long roundTripTime(long timeout, TimeUnit unit) throws InterruptedException"
+2d45a13249943cafa73460b35c3c366e5742eb6f,Ping.java,"public long roundTripTime(long timeout, TimeUnit unit) throws InterruptedException",public long roundTripTime() throws InterruptedException
+2d45a13249943cafa73460b35c3c366e5742eb6f,HttpResponseCacheTest.java,"private String formatDate(long delta, TimeUnit timeUnit)",private String formatDate(Date date)
+2d45a13249943cafa73460b35c3c366e5742eb6f,HttpResponseCacheTest.java,private String formatDate(Date date),"private String formatDate(long delta, TimeUnit timeUnit)"
+2d45a13249943cafa73460b35c3c366e5742eb6f,HttpResponseCacheTest.java,"private String readAscii(URLConnection connection, int count) throws IOException",private String readAscii(URLConnection connection) throws IOException
+2d45a13249943cafa73460b35c3c366e5742eb6f,HttpResponseCacheTest.java,private String readAscii(URLConnection connection) throws IOException,"private String readAscii(URLConnection connection, int count) throws IOException"
+00a50d1919549b51d941aeb893b2a5ed465aa472,MockWebServer.java,private void processHandshakeFailure(Socket raw) throws Exception,"private void processHandshakeFailure(Socket raw, int sequenceNumber) throws Exception"
+d5ab35a272dfd9a7eca1072a72d3d57f29c438b4,MockResponse.java,public MockResponse addHeader(String header),"public MockResponse addHeader(String name, Object value)"
+d5ab35a272dfd9a7eca1072a72d3d57f29c438b4,MockResponse.java,"public MockResponse addHeader(String name, Object value)",public MockResponse addHeader(String header)
+d5ab35a272dfd9a7eca1072a72d3d57f29c438b4,MockResponse.java,public MockResponse setBody(byte[] body),"public MockResponse setBody(InputStream bodyStream, long bodyLength)"
+d5ab35a272dfd9a7eca1072a72d3d57f29c438b4,MockResponse.java,"public MockResponse setBody(InputStream bodyStream, long bodyLength)",public MockResponse setBody(byte[] body)
+d5ab35a272dfd9a7eca1072a72d3d57f29c438b4,MockResponse.java,"public MockResponse setBody(InputStream bodyStream, long bodyLength)",public MockResponse setBody(String body)
+d5ab35a272dfd9a7eca1072a72d3d57f29c438b4,MockResponse.java,public MockResponse setBody(String body),"public MockResponse setBody(InputStream bodyStream, long bodyLength)"
+6e382aa9b807c61adc88eb0a2cddc047382e36d9,SpdyConnection.java,"private void writePing(boolean reply, int payload1, int payload2, Ping ping) throws IOException","private void writePing(int id, Ping ping) throws IOException"
+4db72885614c8e9224b0836b85f58acdb4f005cd,Hpack.java,"private void insertIntoHeaderTable(int index, HeaderEntry entry)","private void insertIntoHeaderTable(int index, String name, String value)"
+350c43b6fe02401a73f967d9ef322061638b372a,RawHeaders.java,public Builder readHeaders(InputStream in) throws IOException,"public static void readHeaders(InputStream in, RawHeaders out) throws IOException"
+14b6e76e7d7af9b99a7fdc1a56d7ee9309711722,HttpResponseCache.java,"public boolean matches(Request request, Response response)",public boolean matches(Request request)
+957537774b319bb0109819258a11af78a98bcb97,HttpTransport.java,public static Response.Builder readResponse(InputStream in) throws IOException,"public static Response.Builder readResponse(Request request, InputStream in) throws IOException"
+262e3d43b63083ad9f87f3f332827b2ae37a30ff,SpdyTransport.java,"public static List<String> writeNameValueBlock(Request request, String version)",public static List<String> writeNameValueBlock(Headers headers)
+d7444f5fc4414b51b2708606257381cc0de404e1,SpdyTransport.java,"public static List<String> writeNameValueBlock(Request request, String protocol, String version)","public static List<String> writeNameValueBlock(Request request, String version)"
+46a0852c202acf68cd890867a35f8e51b81c2948,RouteDatabase.java,public synchronized void failed(Route failedRoute),"public synchronized void failed(Route failedRoute, IOException failure)"
+c1458f74d8ede24d188dff928f13376188f9122d,CacheStrategy.java,public CacheStrategy get(),"public static CacheStrategy get(long nowMillis, Response response, Request request)"
+c1458f74d8ede24d188dff928f13376188f9122d,CacheStrategy.java,private CacheStrategy getCandidate(),"private static CacheStrategy getCandidate(long nowMillis, Response response, Request request)"
+471ed070e9e0b0860b0146f26458c5c0bd8169e0,BaseTestHandler.java,"public void windowUpdate(int streamId, int windowSizeIncrement)","public void windowUpdate(int streamId, int deltaWindowSize, boolean endFlowControl)"
+d990b5819cd6282923134564f3bcc59263eb0616,SpdyStream.java,private void waitUntilWritable(int byteCount) throws IOException,"private void waitUntilWritable(int count, boolean last) throws IOException"
+b77e76c7367af5a09097f407c0066a227454dec8,URLConnectionTest.java,"private void assertContent(String expected, HttpURLConnection connection, int limit)
+       throws IOException","private void assertContent(String expected, URLConnection connection) throws IOException"
+dac5aed3d5f9307b9d1ab0a8c7840b232d053ef3,HttpConnection.java,public boolean discard(InputStream responseBodyIn),"public boolean discard(HttpEngine httpEngine, InputStream responseBodyIn)"
+a669069599893a774748181a238e0b009a4f3e87,HttpConnection.java,"public boolean discard(Source in, int timeoutMillis)",public boolean discard(InputStream responseBodyIn)
+a669069599893a774748181a238e0b009a4f3e87,HttpConnection.java,"protected final void cacheWrite(OkBuffer source, long byteCount) throws IOException","protected final void cacheWrite(byte[] buffer, int offset, int count) throws IOException"
+cca9142903097dbe4643944bbb4dbe5e2b87d922,BufferedSink.java,public void write(ByteString byteString) throws IOException,"public void write(ByteString byteString, Deadline deadline) throws IOException"
+cca9142903097dbe4643944bbb4dbe5e2b87d922,BufferedSink.java,public void write(ByteString byteString) throws IOException,"public void write(byte[] data, int offset, int byteCount, Deadline deadline) throws IOException"
+cca9142903097dbe4643944bbb4dbe5e2b87d922,BufferedSink.java,public void writeUtf8(String string) throws IOException,"public void writeUtf8(String string, Deadline deadline) throws IOException"
+cca9142903097dbe4643944bbb4dbe5e2b87d922,BufferedSink.java,"public void write(byte[] data, int offset, int byteCount) throws IOException","public void write(ByteString byteString, Deadline deadline) throws IOException"
+cca9142903097dbe4643944bbb4dbe5e2b87d922,BufferedSink.java,"public void write(byte[] data, int offset, int byteCount) throws IOException","public void write(byte[] data, int offset, int byteCount, Deadline deadline) throws IOException"
+cca9142903097dbe4643944bbb4dbe5e2b87d922,BufferedSink.java,public void writeByte(int b) throws IOException,"public void writeByte(int b, Deadline deadline) throws IOException"
+cca9142903097dbe4643944bbb4dbe5e2b87d922,BufferedSink.java,public void writeShort(int s) throws IOException,"public void writeShort(int s, Deadline deadline) throws IOException"
+cca9142903097dbe4643944bbb4dbe5e2b87d922,BufferedSink.java,public void writeInt(int i) throws IOException,"public void writeInt(int i, Deadline deadline) throws IOException"
+cca9142903097dbe4643944bbb4dbe5e2b87d922,BufferedSource.java,public void skip(long byteCount) throws IOException,"public void skip(long byteCount, Deadline deadline) throws IOException"
+cca9142903097dbe4643944bbb4dbe5e2b87d922,BufferedSource.java,public long seek(byte b) throws IOException,"public long seek(byte b, Deadline deadline) throws IOException"
+cca9142903097dbe4643944bbb4dbe5e2b87d922,DeflaterSink.java,private void deflate(boolean syncFlush) throws IOException,"private void deflate(Deadline deadline, boolean syncFlush) throws IOException"
+7995b46276295a7c1d8afd920d6900777dfeae59,OkBuffer.java,public long indexOf(byte b),"public long indexOf(byte b, long fromIndex) throws IOException"
+7995b46276295a7c1d8afd920d6900777dfeae59,OkBuffer.java,"public long indexOf(byte b, long fromIndex)",public long indexOf(byte b) throws IOException
+84184afdb26b42ff615896f9c0161157cc84ec73,SpdyStream.java,"private void writeFrame(boolean outFinished, long byteCount) throws IOException",private void writeFrame() throws IOException
+b03026067b3686e45d4e11886eaccf084c36b01e,Huffman.java,private void buildTree(),"private void buildTree(int[] codes, byte[] lengths)"
+34ab38d63613f861f7d14b6f572ac42b57b10b0f,JavaApiConverterTest.java,private static Response.Body createResponseBody(String bodyText),"private static Response.Body createResponseBody(final String contentType, final byte[] bytes)"
+5b6f64a46220911466350202ae974f167497225a,HttpEngine.java,"public HttpEngine recover(IOException e, Sink requestBodyOut)",public HttpEngine recover(IOException e)
+97a01311da455eb392aea2149571de88cbfd9259,Headers.java,public String get(String name),"private static String get(String[] namesAndValues, String fieldName)"
+97a01311da455eb392aea2149571de88cbfd9259,Headers.java,"private static String get(String[] namesAndValues, String name)",public String get(String fieldName)
+97a01311da455eb392aea2149571de88cbfd9259,Headers.java,"private static String get(String[] namesAndValues, String name)",public String get(String fieldName)
+97a01311da455eb392aea2149571de88cbfd9259,Headers.java,public String get(String name),"private static String get(String[] namesAndValues, String fieldName)"
+ddac0083db1f4d8fccf68c23254751c4167565a1,HeaderParser.java,"public static int parseSeconds(String value, int defaultValue)",public static int parseSeconds(String value)
+e74e3f3bf744ef7f4d8ee724a7cf2347e486cfab,Util.java,"public static boolean skipAll(Source source, int duration, TimeUnit timeUnit) throws IOException","public static boolean skipAll(Source in, int timeoutMillis) throws IOException"
+32b7675b726a1ca62f5080581f6daaf9b7c6a48e,HttpEngine.java,"public void readResponse(boolean forWebSocket, RequestBody requestBody) throws IOException",public void readResponse(boolean forWebSocket) throws IOException
+27c6e69c82a8252aed664b4ae6e09e5627778586,HttpEngine.java,public void readResponse() throws IOException,"public void readResponse(boolean forWebSocket, RequestBody requestBody) throws IOException"
+3a65dcd37bcc46916eab37f340298ab9e1ca49dc,JavaApiConverter.java,private static ResponseBody createOkBody(final URLConnection urlConnection),"private static ResponseBody createOkBody(final Headers okHeaders, InputStream body)"
+60f5406dcc094d0431420139bd002e8bdd4ea5d5,ConnectionSpec.java,"private ConnectionSpec supportedSpec(SSLSocket sslSocket, boolean isFallback)",private ConnectionSpec supportedSpec(SSLSocket sslSocket)
+d18d8ce08a273bb73d8fe2bdbc99dfa95226ca54,RealWebSocket.java,"private void peerClose(int code, String reason, boolean writeCloseResponse)","private void peerClose(int code, String reason)"
+b7baf23d86305762ea4e42adc4054c0840eca5ca,ResponseCacheTest.java,private String formatDate(Date date),"private String formatDate(long delta, TimeUnit timeUnit)"
+4a27e9179f17ce91df3a6b8518578f82cf1c8c86,HttpUrl.java,"static String encode(String input, int pos, int limit, String encodeSet)","private void encode(StringBuilder out, String input, int pos, int limit, String encodeSet)"
+4a27e9179f17ce91df3a6b8518578f82cf1c8c86,HttpUrl.java,"static void encode(StringBuilder out, String input, int pos, int limit, String encodeSet)","private String encode(String input, int pos, int limit, String encodeSet)"
+9896c2f10ba1e74bb2bccd9699b87e78b60c8991,HttpUrl.java,public Builder username(String username),"private String username(String input, int pos, int limit)"
+9896c2f10ba1e74bb2bccd9699b87e78b60c8991,HttpUrl.java,public Builder query(String query),"private String query(String input, int pos, int limit)"
+fada82ca036bad8962f911d83fc325e6f48e363b,HttpUrl.java,static String percentDecode(String encoded),"private static String percentDecode(String encoded, int pos, int limit)"
+fada82ca036bad8962f911d83fc325e6f48e363b,HttpUrl.java,static String percentDecode(String encoded),"private static String percentDecode(Buffer out, String encoded, int pos, int limit)"
+fada82ca036bad8962f911d83fc325e6f48e363b,HttpUrl.java,"static String percentDecode(String encoded, int pos, int limit)","private static String percentDecode(Buffer out, String encoded, int pos, int limit)"
+fada82ca036bad8962f911d83fc325e6f48e363b,HttpUrl.java,"static void percentDecode(Buffer out, String encoded, int pos, int limit)","private static String percentDecode(String encoded, int pos, int limit)"
+53ebedf932b71bed7b05220e31b24388301168a4,HttpUrl.java,"static String percentDecode(String encoded, boolean query)",static String percentDecode(String encoded)
+53ebedf932b71bed7b05220e31b24388301168a4,HttpUrl.java,"static String percentDecode(String encoded, boolean query)","static String percentDecode(String encoded, int pos, int limit)"
+53ebedf932b71bed7b05220e31b24388301168a4,HttpUrl.java,"static String percentDecode(String encoded, boolean query)","static void percentDecode(Buffer out, String encoded, int pos, int limit)"
+53ebedf932b71bed7b05220e31b24388301168a4,HttpUrl.java,"static String percentDecode(String encoded, int pos, int limit, boolean query)",static String percentDecode(String encoded)
+53ebedf932b71bed7b05220e31b24388301168a4,HttpUrl.java,"static String percentDecode(String encoded, int pos, int limit, boolean query)","static String percentDecode(String encoded, int pos, int limit)"
+53ebedf932b71bed7b05220e31b24388301168a4,HttpUrl.java,"static void percentDecode(Buffer out, String encoded, int pos, int limit, boolean query)",static String percentDecode(String encoded)
+53ebedf932b71bed7b05220e31b24388301168a4,HttpUrl.java,"static void percentDecode(Buffer out, String encoded, int pos, int limit, boolean query)","static String percentDecode(String encoded, int pos, int limit)"
+53ebedf932b71bed7b05220e31b24388301168a4,HttpUrl.java,"static void percentDecode(Buffer out, String encoded, int pos, int limit, boolean query)","static void percentDecode(Buffer out, String encoded, int pos, int limit)"
+c4498267504fef9d5c27a6442d8263b47372c50d,HttpUrl.java,static String percentDecode(String encoded),"static String percentDecode(String encoded, boolean query)"
+c4498267504fef9d5c27a6442d8263b47372c50d,HttpUrl.java,static String percentDecode(String encoded),"static String percentDecode(String encoded, int pos, int limit, boolean query)"
+c4498267504fef9d5c27a6442d8263b47372c50d,HttpUrl.java,static String percentDecode(String encoded),"static void percentDecode(Buffer out, String encoded, int pos, int limit, boolean query)"
+c4498267504fef9d5c27a6442d8263b47372c50d,HttpUrl.java,"static String percentDecode(String encoded, int pos, int limit)","static String percentDecode(String encoded, boolean query)"
+c4498267504fef9d5c27a6442d8263b47372c50d,HttpUrl.java,"static String percentDecode(String encoded, int pos, int limit)","static String percentDecode(String encoded, int pos, int limit, boolean query)"
+c4498267504fef9d5c27a6442d8263b47372c50d,HttpUrl.java,"static String percentDecode(String encoded, int pos, int limit)","static void percentDecode(Buffer out, String encoded, int pos, int limit, boolean query)"
+c4498267504fef9d5c27a6442d8263b47372c50d,HttpUrl.java,"static void percentDecode(Buffer out, String encoded, int pos, int limit)","static String percentDecode(String encoded, boolean query)"
+c4498267504fef9d5c27a6442d8263b47372c50d,HttpUrl.java,"static void percentDecode(Buffer out, String encoded, int pos, int limit)","static void percentDecode(Buffer out, String encoded, int pos, int limit, boolean query)"
+0b1d20c47cc608aa0a68dabd4f105adb6b690afe,HttpUrl.java,"static String percentDecode(String encoded, boolean plusIsSpace)",static String percentDecode(String encoded)
+0b1d20c47cc608aa0a68dabd4f105adb6b690afe,HttpUrl.java,"static String percentDecode(String encoded, boolean plusIsSpace)",private List<String> percentDecode(List<String> list)
+0b1d20c47cc608aa0a68dabd4f105adb6b690afe,HttpUrl.java,"static String percentDecode(String encoded, boolean plusIsSpace)","static String percentDecode(String encoded, int pos, int limit)"
+0b1d20c47cc608aa0a68dabd4f105adb6b690afe,HttpUrl.java,"static String percentDecode(String encoded, boolean plusIsSpace)","static void percentDecode(Buffer out, String encoded, int pos, int limit)"
+0b1d20c47cc608aa0a68dabd4f105adb6b690afe,HttpUrl.java,"private List<String> percentDecode(List<String> list, boolean plusIsSpace)",static String percentDecode(String encoded)
+0b1d20c47cc608aa0a68dabd4f105adb6b690afe,HttpUrl.java,"private List<String> percentDecode(List<String> list, boolean plusIsSpace)",private List<String> percentDecode(List<String> list)
+0b1d20c47cc608aa0a68dabd4f105adb6b690afe,HttpUrl.java,"private List<String> percentDecode(List<String> list, boolean plusIsSpace)","static String percentDecode(String encoded, int pos, int limit)"
+0b1d20c47cc608aa0a68dabd4f105adb6b690afe,HttpUrl.java,"private List<String> percentDecode(List<String> list, boolean plusIsSpace)","static void percentDecode(Buffer out, String encoded, int pos, int limit)"
+0b1d20c47cc608aa0a68dabd4f105adb6b690afe,HttpUrl.java,"static String percentDecode(String encoded, int pos, int limit, boolean plusIsSpace)",static String percentDecode(String encoded)
+0b1d20c47cc608aa0a68dabd4f105adb6b690afe,HttpUrl.java,"static String percentDecode(String encoded, int pos, int limit, boolean plusIsSpace)",private List<String> percentDecode(List<String> list)
+0b1d20c47cc608aa0a68dabd4f105adb6b690afe,HttpUrl.java,"static String percentDecode(String encoded, int pos, int limit, boolean plusIsSpace)","static String percentDecode(String encoded, int pos, int limit)"
+0b1d20c47cc608aa0a68dabd4f105adb6b690afe,HttpUrl.java,"static void percentDecode(Buffer out, String encoded, int pos, int limit, boolean plusIsSpace)",static String percentDecode(String encoded)
+0b1d20c47cc608aa0a68dabd4f105adb6b690afe,HttpUrl.java,"static void percentDecode(Buffer out, String encoded, int pos, int limit, boolean plusIsSpace)",private List<String> percentDecode(List<String> list)
+0b1d20c47cc608aa0a68dabd4f105adb6b690afe,HttpUrl.java,"static void percentDecode(Buffer out, String encoded, int pos, int limit, boolean plusIsSpace)","static String percentDecode(String encoded, int pos, int limit)"
+0b1d20c47cc608aa0a68dabd4f105adb6b690afe,HttpUrl.java,"static void percentDecode(Buffer out, String encoded, int pos, int limit, boolean plusIsSpace)","static void percentDecode(Buffer out, String encoded, int pos, int limit)"
+38df77497a98ed67a9fc7bcea263f4641d1e615b,RealWebSocket.java,"private void peerClose(int code, String reason)","private void peerClose(int code, String reason, boolean writeCloseResponse)"
+457fb428a729c50c562822571ea9b13e689648f3,Connection.java,"private void createTunnel(int readTimeout, int writeTimeout) throws IOException","private void createTunnel(int readTimeout, int writeTimeout, Request request) throws IOException"
+529c4a36bb21b3fb7717c27f8a31c39c1b603e9d,RequestLine.java,"static String get(Request request, Proxy.Type proxyType)","static String get(Request request, Proxy.Type proxyType, Protocol protocol)"
+4ae314a1f21d07ee5dbad024bc098182219e9e07,ConnectionPool.java,"public synchronized Connection get(Address address, StreamAllocation streamAllocation)",public synchronized Connection get(Address address)
+c099f69d0b7198a40e4a6373ae564b65d04363ef,ConnectionPoolTest.java,"private RealConnection newConnection(ConnectionPool pool, Route route, long idleAtNanos)","private RealConnection newConnection(Route route, long idleAtNanos)"
+b0f2dbb3cb16caae9236eabb29935e5880d2172b,Cache.java,public Response response(DiskLruCache.Snapshot snapshot),"public Response response(Request request, DiskLruCache.Snapshot snapshot)"
+3b44fa37675c1d68298283ae4b8b45cd5771888d,StreamAllocation.java,"public void streamFinished(boolean noNewStreams, HttpStream stream)",public void streamFinished(HttpStream stream)
+98ae0fb92c9335ec17f8710376183e18f5edd355,URLConnectionTest.java,public Socket createSocket(),"public Socket createSocket(InetAddress host, int port)"
+98ae0fb92c9335ec17f8710376183e18f5edd355,URLConnectionTest.java,public Socket createSocket(),"public Socket createSocket(String host, int port)"
+98ae0fb92c9335ec17f8710376183e18f5edd355,URLConnectionTest.java,"public Socket createSocket(InetAddress host, int port)",public Socket createSocket()
+98ae0fb92c9335ec17f8710376183e18f5edd355,URLConnectionTest.java,"public Socket createSocket(String host, int port)",public Socket createSocket()
+32fb79996c68241b5f4fba4670b99c7f03b65aa0,CookiesTest.java,"private Map<String, List<String>> get(HttpUrl url) throws Exception","private Map<String, List<String>> get(MockWebServer server, String path) throws Exception"
+cc70a10177811ae9b6ffaba7315952354a5d64a4,WebSocketWriter.java,"public Sink newMessageSink(int formatOpcode, long contentLength)",public Sink newMessageSink(int formatOpcode)
+7ceaa2387f0be853222f5a1496f1f743fa6f8c6d,Util.java,"public static String hostHeader(HttpUrl url, boolean includeDefaultPort)",public static String hostHeader(HttpUrl url)
+51e4e39842596ece3d0d2c327911a7702607cb3e,HttpEngine.java,"public HttpEngine recover(IOException e, boolean routeException, Sink requestBodyOut)","public HttpEngine recover(IOException e, Sink requestBodyOut)"
+51e4e39842596ece3d0d2c327911a7702607cb3e,HttpEngine.java,"public HttpEngine recover(IOException e, boolean routeException, Sink requestBodyOut)",public HttpEngine recover(IOException e)
+51e4e39842596ece3d0d2c327911a7702607cb3e,HttpEngine.java,"public HttpEngine recover(IOException e, boolean routeException)",public HttpEngine recover(IOException e)
+51e4e39842596ece3d0d2c327911a7702607cb3e,StreamAllocation.java,"public boolean recover(IOException e, boolean routeException, Sink requestBodyOut)","public boolean recover(IOException e, Sink requestBodyOut)"
+51e4e39842596ece3d0d2c327911a7702607cb3e,StreamAllocation.java,"private boolean isRecoverable(IOException e, boolean routeException)",private boolean isRecoverable(IOException e)
+4f24a30c12032b7033884a630696014afd3e77cb,Platform.java,"public void log(int level, String message, Throwable t)",public void log(String message)
+0f5c5c6431cfe7e5227d90fc08e822cd3b2cec9f,HttpEngine.java,"public HttpEngine recover(IOException e, boolean routeException)","public HttpEngine recover(IOException e, boolean routeException, Sink requestBodyOut)"
+576408374d58a3e9a63714b6f7761cb42a315102,HttpEngine.java,"public HttpEngine recover(IOException e, boolean routeException, Response userResponse)","public HttpEngine recover(IOException e, boolean routeException)"
+576408374d58a3e9a63714b6f7761cb42a315102,HttpEngine.java,"public boolean sameConnection(Response response, HttpUrl followUp)",public boolean sameConnection(HttpUrl followUp)
+15a5bc40a4520d935bbc02a3552f51dda77fcc9c,HttpEngine.java,"public Response proceed(Request userRequest, RealInterceptorChain chain) throws IOException",public Response proceed(Request userRequest) throws IOException
+0c04821a25c83fddebb29e8cd590609142ba20a2,Http2ConnectionTest.java,private FramedConnection connection(MockHttp2Peer peer) throws IOException,"private FramedConnection connection(MockSpdyPeer peer, Variant variant) throws IOException"
+3d43a8dba89ccd7333c3ebcf74928e441790d943,Http2Connection.java,"private Http2Stream newStream(
+       int associatedStreamId, List<Header> requestHeaders, boolean out) throws IOException","public FramedStream newStream(List<Header> requestHeaders, boolean out) throws IOException"
+508eb90b3c8d494686651bc423838f5750f60c92,WebSocketRecorder.java,public void assertFailure(Throwable t),"public void assertFailure(Class<? extends IOException> cls, String message)"
+40dddb9dcf8ba654e16f6497020043b38b6d22a1,AutobahnTester.java,"private NewWebSocket newWebSocket(String path, NewWebSocket.Listener listener)",private WebSocketCall newWebSocket(String path)
+40dddb9dcf8ba654e16f6497020043b38b6d22a1,SlackApi.java,"public NewWebSocket rtm(HttpUrl url, NewWebSocket.Listener listener)",public WebSocketCall rtm(HttpUrl url)
+c8dbccea5e8e724a799eea4dcf5abde511f4750c,WebSocketProtocol.java,static void validateCloseCode(int code),"static void validateCloseCode(int code, boolean argument) throws ProtocolException"
+55e3ea0422e36c64c70a8381b4c8fcc007a6eaaf,Http2Reader.java,"public boolean nextFrame(boolean requireSettings, Handler handler) throws IOException",public boolean nextFrame(Handler handler) throws IOException
+81c7461c98f2228c3bb1a0c80fb803b5ea2e47f0,RealConnection.java,"public boolean isEligible(Address address, Route route)",public boolean isEligible(Address address)
+e786a376426b938738d3333f52891c68339ae187,Util.java,"public static int indexOf(Comparator<String> comparator, String[] array, String value)","public static <T> int indexOf(T[] array, T value)"
+3b878299e7ab60e92669ddb9c222cbfda67ff038,Http1Codec.java,"protected final void endOfInput(boolean reuseConnection, IOException e) throws IOException",protected final void endOfInput(boolean reuseConnection) throws IOException
+9b0d19f913465483d0942558eb21e37868040050,StreamAllocation.java,"public void streamFinished(boolean noNewStreams, HttpCodec codec, long bytesRead, IOException e)","public void streamFinished(boolean noNewStreams, HttpCodec codec)"
+77471444ec81ad9452ebde7ca2b58db58a1f77d1,StreamAllocation.java,"public void acquire(RealConnection connection, boolean reportedAcquired)",public void acquire(RealConnection connection)
+8e1e9078c823beb77b95776b3cc6a6a4da4d7a07,Credentials.java,"public static String basic(String username, String password)","public static String basic(String userName, String password, Charset charset)"
+8e1e9078c823beb77b95776b3cc6a6a4da4d7a07,Credentials.java,"public static String basic(String username, String password, Charset charset)","public static String basic(String userName, String password)"
+0aa5723dc8ff924abd2c9fa8e03a4f20d0f08580,RetryAndFollowUpInterceptor.java,"private Request followUpRequest(Response userResponse, Connection connection) throws IOException",private Request followUpRequest(Response userResponse) throws IOException
+2e85e1ecf7dc11644132a0c8eccf6641d9ed22af,WebSocketProtocol.java,"static void toggleMask(Buffer.UnsafeCursor cursor, byte[] key)","static void toggleMask(byte[] buffer, long byteCount, byte[] key, long frameBytesRead)"
+36f4fd04f74323c137ca6ac1b464e9f5f04f33bf,MediaTypeTest.java,"private void assertInvalid(String string, String exceptionMessage)",private void assertInvalid(String string)
+0b2486f7f32fbe21c8630f330d240546a15beb66,DnsOverHttps.java,"private Request buildRequest(String hostname, int type)",private Request buildRequest(ByteString query)
+0b2486f7f32fbe21c8630f330d240546a15beb66,DnsOverHttpsTest.java,"private DnsOverHttps buildLocalhost(OkHttpClient bootstrapClient, boolean includeIPv6)",private DnsOverHttps buildLocalhost(OkHttpClient bootstrapClient)
+9f9903e7a36a6b2d7944dc12bac4344b68643d8f,Dispatcher.java,"private <T> void finished(Deque<T> calls, T call)","private <T> void finished(Deque<T> calls, T call, boolean promoteCalls)"
+46ec605734bacc90552643f7bba1b8b6ae09ee0f,Transmitter.java,public Sink createRequestBody(Request request) throws IOException,"public Sink createRequestBody(Request request, long contentLength)"
+626a710f150723bcc08e3b7f3de7d2a4f9f49615,StreamAllocation.java,"private Socket deallocate(boolean released, boolean streamFinished)","private Socket deallocate(boolean noNewStreams, boolean released, boolean streamFinished)"
+7b4b7fecb23a3e18733e150bd0100f7b2bdd5632,Transmitter.java,public void acquireConnection(RealConnection connection),"public void acquireConnection(RealConnection connection, boolean reportedAcquired)"
+7b4b7fecb23a3e18733e150bd0100f7b2bdd5632,StreamAllocation.java,public void transmitterAcquireConnection(RealConnection connection),"public void transmitterAcquireConnection(RealConnection connection, boolean reportedAcquired)"
+e6cfc2a508779c6a32cbbef5885fb43951cea055,Exchange.java,"public Sink createRequestBody(Request request, boolean duplex) throws IOException",public Sink createRequestBody(Request request) throws IOException
+4aca390e594f2683977384e05deb87ab9b4c2c07,URLConnectionTest.java,"private void assertContent(String expected, Response response, int limit)
+       throws IOException","private void assertContent(String expected, HttpURLConnection connection) throws IOException"
+283418b2bc079108cbe3599f06a4ebfa7211e319,UrlComponentEncodingTester.java,"private void testEncodeAndDecode(int codePoint, String codePointString, Component component)","private void testEncodeAndDecode(int codePoint, Component component)"

@@ -23,7 +23,7 @@ def get_func_overriding_commits(repo_url, branch):
 
                 overriding_func_sig_list = get_overriding_func(file_changes)
                 overriden_func_sig_list = get_overriden_func(file_changes)
-
+                print( overriding_func_sig_list, overriden_func_sig_list)
                 for overriding_func in overriding_func_sig_list:
                     for overriden_func in overriden_func_sig_list:
                         # Get commits that added parameters to the exisiting function
@@ -57,7 +57,7 @@ def get_overriding_func(file_changes):
     raw_func_sig_list = []
     func_sig_list = []
 
-    added_func_regex = config.regex.added_func_sign_regex
+    added_func_regex = config.regex["added_func_sign"]
     grp = re.finditer(added_func_regex, file_changes)
     raw_func_sig_list = [x.group() for x in grp]
     # print(raw_func_sig_list)
@@ -75,7 +75,7 @@ def get_overriden_func(file_changes):
     raw_func_sig_list = []
     func_sig_list = []
 
-    deleted_func_regex = config.regex.deleted_func_sign_regex
+    deleted_func_regex = config.regex["deleted_func_sign"]
     matched_grp = re.finditer(deleted_func_regex, file_changes)
     raw_func_sig_list = [x.group() for x in matched_grp]
     # print(raw_func_sig_list)
@@ -89,7 +89,7 @@ def get_overriden_func(file_changes):
     # print(func_sig_list)
     return func_sig_list
 
-# Get function name
+# Returns name of function from function signature
 def get_func_name(func_sign):
     func_name_regex = "([a-zA-Z0-9_]+) *\\("
     # Match with function name regex
@@ -105,11 +105,11 @@ def trim_func_sign(func_sign):
 def trim_func_name(func_name):
     return func_name.translate(func_name.maketrans("", "", "()")).strip()
 
- # Get list of function arguments
+ # Returns list of function arguments from funcation signature
 def get_func_arguments(func_sign):
     # Match with function arguments regex
     arg_search = re.search(
-        config.regex.func_args_regex, func_sign
+        config.regex["func_args"], func_sign
     ) 
 
     if arg_search is not None:
@@ -117,4 +117,4 @@ def get_func_arguments(func_sign):
         func_args_list = func_args.split(",")
         return func_args_list
     else:
-        return None
+        return []
