@@ -8,12 +8,14 @@ def get_repo_name(repo_url):
     else:
         return None
 
+
 # Get extension of file from filename
 def get_file_ext(filename):
-    if filename and filename.find('.') != -1:
+    if filename and filename.find(".") != -1:
         return filename.split(".")[-1]
     else:
         return None
+
 
 # Get complete filepath(includes extension .csv) for csv file given directory and file basename
 def get_csv_filepath(dir, file_basename):
@@ -22,6 +24,7 @@ def get_csv_filepath(dir, file_basename):
         return filepath
     else:
         return None
+
 
 # Check and create directory if it does not exist
 def check_dir_exists(dir):
@@ -32,7 +35,8 @@ def check_dir_exists(dir):
         # Create a new directory
         os.makedirs(dir)
         # print("Directory is created!")
-        
+
+
 # Export data as csv file in the target directory
 def export_to_csv(
     headers,

@@ -18,7 +18,7 @@ if target_repo_url:
         output_dir = config.output_dir
         export_to_csv(data=results, headers=headers, dir=output_dir, filename=filename)
         print(f"Successfully generated {filename}.csv iniside direcoty {output_dir}")
-        
+
     except Exception as e:
         print(f"Error occured: {type(e).__name__}")
         print(str(e))
