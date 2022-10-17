@@ -20,7 +20,9 @@ valid_file_ext = ["java"]
 
 # Regular expressions
 regex = {
-    "added_func_sign": "\+ + (public|private|static|protected|abstract|native) ([a-zA-Z0-9<>._?, ]+) +([a-zA-Z0-9_]+) *\\([a-zA-Z0-9<>\\[\\]._?, \n]*\\) *([a-zA-Z0-9_ ,\n]*) *\\{",
-    "deleted_func_sign": "- + (public|private|static|protected|abstract|native) ([a-zA-Z0-9<>._?, ]+) +([a-zA-Z0-9_]+) *\\([a-zA-Z0-9<>\\[\\]._?, \n]*\\) *([a-zA-Z0-9_ ,\n]*) *\\{",
+    "added_func_def": "\+ + (public|private|static|protected|abstract|native) ([a-zA-Z0-9<>._?, ]+) +([a-zA-Z0-9_]+) *\\([a-zA-Z0-9<>\\[\\]._?, \n]*\\) *([a-zA-Z0-9_ ,\n]*) *\\{",
+    "deleted_func_def": "- + (public|private|static|protected|abstract|native) ([a-zA-Z0-9<>._?, ]+) +([a-zA-Z0-9_]+) *\\([a-zA-Z0-9<>\\[\\]._?, \n]*\\) *([a-zA-Z0-9_ ,\n]*) *\\{",
+    "func_sign": "([a-zA-Z0-9_]+) *\\([a-zA-Z0-9<>\\[\\]._?, \n]*\\)",
+    "func_name": "([a-zA-Z0-9_]+) *\\(",
     "func_args": "\(.*\)",
 }

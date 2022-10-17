@@ -41,7 +41,7 @@ Then, create a .env file and copy the contents of .env.example
 `GIT_BRANCH` : Branch of the github repository to be analyzed.  
 `OUTPUT_DIR` : Directory in the project root that will contain csv file
 
- :warning: :  `GIT_BRANCH` should be a valid github repository branch. The default branch of github repository usually either `main` or `master`. Configure accordingly in the `.env` file. Branches other that default `main` or `master` should be written as `origin/<branch-name>`. Incorrect configuration will throw `GitAttribute Error` in the console.
+ :warning: :  `GIT_BRANCH` should be a valid github repository branch. The default branch of github repository usually either `main` or `master`. Configure accordingly in the `.env` file. Branches other that default `main` or `master` should be written as `origin/<branch-name>`. Incorrect configuration will throw `GitCommandError` in the console.
 
 Finally, run following command
 
